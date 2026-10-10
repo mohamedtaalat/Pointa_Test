@@ -1,0 +1,7 @@
+staging:
+  base_url: ""
+  api_url: ""
+
+production:
+  base_url: ""
+  api_url: ""

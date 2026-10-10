@@ -1,0 +1,6 @@
+browser: chrome
+headless: false
+implicit_wait: 0
+explicit_wait: 10
+page_load_timeout: 30
+log_level: INFO
