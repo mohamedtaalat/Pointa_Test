@@ -35,9 +35,6 @@ def driver():
 #
 #     client.close()
 
-
-
-
 import re
 from datetime import datetime
 
