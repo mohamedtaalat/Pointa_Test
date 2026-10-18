@@ -3,6 +3,7 @@ import os
 
 import pytest
 
+from api.base_client import BaseClient
 from utils.config_reader import get_base_urls
 from utils.driver_factory import create_driver
 # from api.users_api import UsersAPI
@@ -22,18 +23,18 @@ def driver():
     browser.quit()
 
 
-# @pytest.fixture
-# def api_client(environment):
-#     token = os.getenv("API_TOKEN")
-#
-#     client = UsersAPI(
-#         base_url=environment["api_url"],
-#         token=token,
-#     )
-#
-#     yield client
-#
-#     client.close()
+@pytest.fixture
+def api_client(environment):
+    token = os.getenv("API_TOKEN")
+
+    client = BaseClient(
+        base_url=environment["api_url"],
+        token=token,
+    )
+
+    yield client
+
+    client.close()
 
 import re
 from datetime import datetime

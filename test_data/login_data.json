@@ -1,0 +1,117 @@
+
+[
+  {
+    "scenario": "Login with valid email and valid password",
+    "email": "test@test.com",
+    "password": "ValidPass123!",
+    "expected_result": "success"
+  },
+  {
+    "scenario": "Login with another valid registered email and password",
+    "email": "user1@example.com",
+    "password": "UserPass123!",
+    "expected_result": "success"
+  },
+  {
+    "scenario": "Login with valid email and incorrect password",
+    "email": "test@test.com",
+    "password": "WrongPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with unregistered email and valid-looking password",
+    "email": "unknown@example.com",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with incorrect email and incorrect password",
+    "email": "wrong@example.com",
+    "password": "WrongPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with empty email and empty password",
+    "email": "",
+    "password": "",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with empty email and valid password",
+    "email": "",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with valid email and empty password",
+    "email": "test@test.com",
+    "password": "",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email containing only spaces",
+    "email": "   ",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with password containing only spaces",
+    "email": "test@test.com",
+    "password": "   ",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email missing the @ symbol",
+    "email": "testtest.com",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email missing the domain",
+    "email": "test@",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email missing the local part",
+    "email": "@example.com",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email missing the domain extension",
+    "email": "test@example",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email containing multiple @ symbols",
+    "email": "test@@example.com",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email containing consecutive dots",
+    "email": "test..user@example.com",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email containing spaces",
+    "email": "test user@example.com",
+    "password": "ValidPass123!",
+    "expected_result": "failed"
+  },
+  {
+    "scenario": "Login with email containing leading and trailing spaces",
+    "email": " test@test.com ",
+    "password": "ValidPass123!",
+    "expected_result": "success"
+  },
+  {
+    "scenario": "Login with email using uppercase letters",
+    "email": "TEST@TEST.COM",
+    "password": "ValidPass123!",
+    "expected_result": "success"
+  }
+]
