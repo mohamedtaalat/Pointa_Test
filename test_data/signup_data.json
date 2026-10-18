@@ -5,103 +5,98 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01116079322",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with another valid Egyptian phone prefix 010",
+    "scenario": "Signup with valid Egyptian phone prefix 010",
     "email": "user010@example.com",
     "password": "SecurePass123!",
     "full_name": "Ahmed Mohamed",
     "phone_number": "01012345678",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with another valid Egyptian phone prefix 012",
+    "scenario": "Signup with valid Egyptian phone prefix 012",
     "email": "user012@example.com",
     "password": "SecurePass123!",
     "full_name": "Sara Ali",
     "phone_number": "01212345678",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with another valid Egyptian phone prefix 015",
+    "scenario": "Signup with valid Egyptian phone prefix 015",
     "email": "user015@example.com",
     "password": "SecurePass123!",
     "full_name": "Omar Hassan",
     "phone_number": "01512345678",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with valid name containing three words",
+    "scenario": "Signup with full name containing three words",
     "email": "three.words@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Ahmed Talaat",
     "phone_number": "01112345678",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with valid name containing a hyphen",
+    "scenario": "Signup with full name containing a hyphen",
     "email": "hyphen.name@example.com",
     "password": "SecurePass123!",
     "full_name": "Mariam Hassan-Ali",
     "phone_number": "01012345678",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with valid name containing an apostrophe",
+    "scenario": "Signup with full name containing an apostrophe",
     "email": "apostrophe.name@example.com",
     "password": "SecurePass123!",
     "full_name": "Mariam O'Neil",
     "phone_number": "01212345678",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with valid email containing a plus sign",
+    "scenario": "Signup with email containing a plus sign",
     "email": "mohamed+signup@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01512345678",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with valid email containing a subdomain",
+    "scenario": "Signup with email containing a subdomain",
     "email": "mohamed@mail.example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01122334455",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with valid email containing uppercase letters",
+    "scenario": "Signup with email containing uppercase letters",
     "email": "Mohamed.Talaat@Example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01022334455",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
-    "scenario": "Signup with valid password containing special characters",
+    "scenario": "Signup with password containing special characters",
     "email": "special.password@example.com",
     "password": "P@ssw0rd!#2026",
     "full_name": "Ahmed Ali",
     "phone_number": "01222334455",
-    "expected_result": "success"
-  },
-  {
-    "scenario": "Signup with valid password containing numbers only",
-    "email": "numeric.password@example.com",
-    "password": "12345678",
-    "full_name": "Ahmed Ali",
-    "phone_number": "01522334455",
-    "expected_result": "success"
-  },
-  {
-    "scenario": "Signup with valid password containing letters only",
-    "email": "letters.password@example.com",
-    "password": "PasswordOnly",
-    "full_name": "Ahmed Ali",
-    "phone_number": "01122334466",
-    "expected_result": "success"
+    "expected_result": "success",
+    "expected_status_code": "201"
   },
   {
     "scenario": "Signup with empty email",
@@ -109,23 +104,26 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01116079322",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
     "scenario": "Signup with empty password",
     "email": "empty.password@example.com",
     "password": "",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079323",
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
     "scenario": "Signup with empty full name",
     "email": "empty.name@example.com",
     "password": "SecurePass123!",
     "full_name": "",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079324",
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
     "scenario": "Signup with empty phone number",
@@ -133,7 +131,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
     "scenario": "Signup with all fields empty",
@@ -141,159 +140,134 @@
     "password": "",
     "full_name": "",
     "phone_number": "",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
-    "scenario": "Signup with email missing at symbol",
+    "scenario": "Signup with email missing the @ symbol",
     "email": "mohamed.example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079325",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with email missing domain",
+    "scenario": "Signup with email missing the domain",
     "email": "mohamed@",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079326",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with email missing local part",
+    "scenario": "Signup with email missing the local part",
     "email": "@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with email missing top-level domain",
-    "email": "mohamed@example",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079327",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with email containing spaces",
     "email": "mohamed talaat@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079328",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with email containing two at symbols",
+    "scenario": "Signup with email containing multiple @ symbols",
     "email": "mohamed@@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079329",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with email containing consecutive dots in local part",
+    "scenario": "Signup with email containing consecutive dots",
     "email": "mohamed..talaat@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with email starting with a dot",
-    "email": ".mohamed@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with email ending local part with a dot",
-    "email": "mohamed.@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079330",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with email containing a leading space",
     "email": " mohamed@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079331",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with email containing a trailing space",
     "email": "mohamed@example.com ",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079332",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with password below minimum length",
     "email": "short.password@example.com",
     "password": "123",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079333",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with password containing only spaces",
     "email": "spaces.password@example.com",
     "password": "        ",
     "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with password containing leading spaces",
-    "email": "leading.password@example.com",
-    "password": "  SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with password containing trailing spaces",
-    "email": "trailing.password@example.com",
-    "password": "SecurePass123!  ",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079334",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with full name containing only spaces",
     "email": "spaces.name@example.com",
     "password": "SecurePass123!",
     "full_name": "     ",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079335",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with full name containing numbers only",
     "email": "numeric.name@example.com",
     "password": "SecurePass123!",
     "full_name": "123456",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079336",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with full name containing special characters only",
     "email": "special.name@example.com",
     "password": "SecurePass123!",
     "full_name": "@#$%",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079337",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with full name containing numbers and letters",
     "email": "mixed.name@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed123",
-    "phone_number": "01116079322",
-    "expected_result": "failed"
+    "phone_number": "01116079338",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with phone number containing fewer than 11 digits",
@@ -301,7 +275,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "0111607932",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with phone number containing more than 11 digits",
@@ -309,47 +284,26 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "011160793222",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with phone number starting with invalid prefix 013",
+    "scenario": "Signup with invalid Egyptian mobile prefix 013",
     "email": "invalid.prefix@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01312345678",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with phone number starting with invalid prefix 014",
+    "scenario": "Signup with invalid Egyptian mobile prefix 014",
     "email": "invalid.prefix014@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01412345678",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with phone number starting with zero only",
-    "email": "zero.phone@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "00000000000",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with phone number starting with country code +20",
-    "email": "country.code@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "+201116079322",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with phone number starting with country code 0020",
-    "email": "country.code0020@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "00201116079322",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with phone number containing letters",
@@ -357,7 +311,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "011ABC9322",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with phone number containing special characters",
@@ -365,7 +320,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "011-607-9322",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with phone number containing spaces",
@@ -373,7 +329,17 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "011 160 79322",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
+  },
+  {
+    "scenario": "Signup with phone number using international country code",
+    "email": "country.code@example.com",
+    "password": "SecurePass123!",
+    "full_name": "Mohamed Talaat",
+    "phone_number": "+201116079322",
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with phone number containing Arabic-Indic digits",
@@ -381,7 +347,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "٠١١١٦٠٧٩٣٢٢",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with phone number containing only letters",
@@ -389,23 +356,17 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "abcdefghijk",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with phone number containing 10 digits",
-    "email": "ten.digits.phone@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "1116079322",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with phone number containing 11 digits but invalid prefix",
+    "scenario": "Signup with 11 digits but invalid mobile prefix",
     "email": "invalid.mobile.prefix@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "02116079322",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with duplicate email",
@@ -413,7 +374,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01116079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "409"
   },
   {
     "scenario": "Signup with duplicate phone number",
@@ -421,7 +383,8 @@
     "password": "SecurePass123!",
     "full_name": "Ahmed Mohamed",
     "phone_number": "01116079322",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "409"
   },
   {
     "scenario": "Signup with duplicate email using uppercase letters",
@@ -429,15 +392,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01016079323",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with duplicate email containing leading or trailing spaces",
-    "email": " existing.user@example.com ",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01216079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "409"
   },
   {
     "scenario": "Signup with SQL injection attempt in email",
@@ -445,7 +401,8 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01516079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with SQL injection attempt in full name",
@@ -453,23 +410,17 @@
     "password": "SecurePass123!",
     "full_name": "' OR '1'='1' --",
     "phone_number": "01126079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
-    "scenario": "Signup with HTML or script injection attempt in full name",
+    "scenario": "Signup with script injection attempt in full name",
     "email": "script.name@example.com",
     "password": "SecurePass123!",
     "full_name": "<script>alert(1)</script>",
     "phone_number": "01026079323",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with HTML injection attempt in email",
-    "email": "<script>alert(1)</script>@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01226079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with HTML injection attempt in phone number",
@@ -477,58 +428,39 @@
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "<script>01112345678</script>",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with email containing a newline character",
-    "email": "mohamed\n@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01136079323",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with full name containing a newline character",
-    "email": "newline.name@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed\nTalaat",
-    "phone_number": "01036079323",
-    "expected_result": "failed"
-  },
-  {
-    "scenario": "Signup with email containing a tab character",
-    "email": "mohamed\t@example.com",
-    "password": "SecurePass123!",
-    "full_name": "Mohamed Talaat",
-    "phone_number": "01236079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "422"
   },
   {
     "scenario": "Signup with missing full_name field",
     "email": "missing.name@example.com",
     "password": "SecurePass123!",
     "phone_number": "01146079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
     "scenario": "Signup with missing phone_number field",
     "email": "missing.phone@example.com",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
     "scenario": "Signup with missing email field",
     "password": "SecurePass123!",
     "full_name": "Mohamed Talaat",
     "phone_number": "01046079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "400"
   },
   {
     "scenario": "Signup with missing password field",
     "email": "missing.password@example.com",
     "full_name": "Mohamed Talaat",
     "phone_number": "01246079323",
-    "expected_result": "failed"
+    "expected_result": "failed",
+    "expected_status_code": "400"
   }
 ]

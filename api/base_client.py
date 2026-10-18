@@ -24,24 +24,24 @@ class BaseClient:
 
     def request(self, method, endpoint, **kwargs):
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
-
         kwargs.setdefault("timeout", self.timeout)
 
-        logger.info(
-            "API request: %s %s", method.upper(), url
-        )
+        logger.info("API request: %s %s", method.upper(), url)
 
-        response = self.session.request(
-            method, url, **kwargs
-        )
+        try:
+            response = self.session.request(method, url, **kwargs)
 
-        logger.info(
-            "API response: status=%s, elapsed=%.3fs",
-            response.status_code,
-            response.elapsed.total_seconds(),
-        )
+            logger.info(
+                "API response: status=%s, elapsed=%.3fs",
+                response.status_code,
+                response.elapsed.total_seconds(),
+            )
 
-        return response
+            return response
+
+        except requests.RequestException:
+            logger.exception("API request failed: %s %s", method.upper(), url)
+            raise
 
     def get(self, endpoint, **kwargs):
         return self.request("GET", endpoint, **kwargs)
